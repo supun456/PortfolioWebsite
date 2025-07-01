@@ -1,0 +1,149 @@
+/* ==== Base Setup ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* ==== Glowing Grid Background ==== */
+  .background-grid {
+    position: fixed;
+    inset: 0;
+    background:
+      repeating-linear-gradient(0deg, rgba(0, 255, 255, 0.05) 0 1px, transparent 1px 20px),
+      repeating-linear-gradient(90deg, rgba(0, 255, 255, 0.05) 0 1px, transparent 1px 20px),
+      radial-gradient(circle at center, rgba(0,255,255,0.1), transparent 70%);
+    z-index: -1;
+    animation: pulse 10s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+  
+  /* ==== Navbar ==== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #0ff;
+  }
+  .navbar .logo {
+    font-size: 1.2rem;
+    color: #0ff;
+  }
+  .accent-purple {
+    color: #7f5af0;
+  }
+  .navbar nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 0.95rem;
+    transition: 0.3s;
+  }
+  .navbar nav a:hover {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+  }
+  .theme-dropdown {
+    font-size: 0.9rem;
+    color: #fff;
+    background: #1a1a1a;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #7f5af0;
+    border-radius: 4px;
+  }
+  
+  /* ==== Hero Section ==== */
+  .hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .name-cyan {
+    color: #00ffff;
+    text-shadow: 0 0 12px #00ffff;
+  }
+  .name-purple {
+    color: #7f5af0;
+    text-shadow: 0 0 12px #7f5af0;
+  }
+  
+  /* ==== Terminal Box ==== */
+  .terminal-box {
+    margin: 1.5rem auto;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #0ff;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Share Tech Mono', monospace;
+  }
+  .terminal-header {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-bottom: 0.3rem;
+  }
+  .terminal-body {
+    color: #00ffff;
+    font-size: 1.1rem;
+  }
+  
+  /* ==== Description ==== */
+  .description {
+    max-width: 700px;
+    margin: 1.5rem auto;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* ==== Actions & Buttons ==== */
+  .actions {
+    margin-top: 2rem;
+  }
+  .download-btn {
+    display: inline-block;
+    background: linear-gradient(to right, #00ffff, #7f5af0);
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .download-btn:hover {
+    box-shadow: 0 0 20px #00ffff;
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+  }
+  .social-icons a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: 0.3s;
+  }
+  .social-icons a:hover {
+    text-shadow: 0 0 10px #00ffff;
+  }
+  
